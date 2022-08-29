@@ -1,0 +1,247 @@
+/* Style Rules
+  1- Position
+  2- Display
+  3- Box Model
+  4- Typography
+  5- Visual Effects
+*/
+
+:root {
+  --green: #9CC257;
+  --dark-blue: #001427;
+  --black: #0C0F09;
+  --dark-gray: #41433F;
+  --mid-gray:#7D7F7B;
+  --light-gray: #D3D3D2;
+  --off-white: #F2F2F2;
+  --white: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  font-size: 1.6rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+figure {
+  display: flex;
+}
+
+/*----- Header -----*/
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid var(--off-white);
+  background-color: var(--white);
+}
+
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.user {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: white;
+  transform: translateX(-100vw);
+  transition: .5s;
+}
+
+.user img {
+  width: 133px;
+  height: 133px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  margin-bottom: 4px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.user-email {
+  font-size: 1.6rem;
+  color: var(--mid-gray);
+}
+
+.checkbox {
+  display: none;
+}
+
+.burger-btn {
+  position: absolute;
+  z-index: 3;
+  left: 22px;
+  width: 19px;
+  height: 18px;
+}
+
+.burger-btn span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  background-color: var(--dark-gray);
+}
+
+.burger-btn span:nth-child(2) {
+  width: 11px;
+  margin: 6px 0;
+}
+
+.logo img {
+  width: 100px;
+  height: 32px;
+}
+
+.checkbox:checked ~ .user {
+  transform: translateX(0);
+}
+
+/*----- Main -----*/
+
+.main {
+  margin: 50px 0 28px;
+}
+
+.main img {
+  width: 100%;
+}
+
+.hero {
+  height: 399px;
+  padding-top: 40px;
+  background-color: var(--dark-blue);
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+  margin-bottom: 36px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero img {
+  display: block;
+  width: 224px;
+  margin: 0 auto;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.card {
+  width: calc(50% - 30px);
+  min-width: 136px;
+  max-width: 220px;
+  background-color: var(--off-white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card figure {
+  aspect-ratio: 1/1;
+}
+
+.card figure img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-price {
+  margin-top: 8px;
+  padding-left: 12px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.card-name {
+  min-height: 34px;
+  margin-bottom: 8px;
+  padding: 0 12px;
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+}
+
+/*----- Footer -----*/
+
+.footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 36px 0;
+  background-color: var(--black);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  padding: 14px 28px;
+  text-decoration: none;
+  background-color: var(--off-white);
+  border-radius: 10px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.cta .icon {
+  width: 28px;
+  height: 27px;
+  margin-right: 6px;
+  background-image: url('https://byhernand.com/mejorando-la/assets/icons/github.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.author {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: var(--off-white);
+  text-decoration: none;
+}
+
+.author strong {
+  font-weight: 600;
+  color: var(--white);
+}

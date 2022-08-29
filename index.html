@@ -5,23 +5,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Eduardo Hernand" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>Mejorando la merch</title>
 </head>
 <body>
-  <header>
-    <div id="user"></div>
+  <header class="header">
+    <div class="header-container">
+      <input class="checkbox" type="checkbox" id="checkbox" />
+      <label class="burger-btn" for="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="user" id="user"></div>
+      <figure class="logo">
+        <img src="https://byhernand.com/mejorando-la/assets/images/logo.svg" alt="Mejorando la merch logo" />
+      </figure>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h1>Mejorando la merch</h1>
-      <p>E-commerce prototype</p>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Online Effective</br>Shopping</h1>
+      <img src="https://byhernand.com/mejorando-la/assets/images/hero-illustration.png" alt="Hero illustration" />
     </section>
 
     <section>
-      <div id="products"></div>
+      <div class="products" id="products"></div>
     </section>
   </main>
+
+
+  <footer class="footer">
+    <a class="cta" href="https://github.com/byhernand/mejorando-la"><span class="icon"></span>Repository</a>
+    <a class="author" href="https://twitter.com/byhernand">Made <strong>@byhernand</strong></a>
+  </footer>
+
 
   <script src="js/main.js"></script>
 </body>

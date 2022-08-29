@@ -15,16 +15,18 @@ async function fetchData(urlApi) {
 
     const list = productList.slice(5, 25); // Getting 20 products
     const cards = list.map(item => `
-      <div>
-        <img src="${item.images[0]}" alt="${item.description}" />
-        <p><b>${item.title}</b></p>
-        <p>$ ${item.price}</p>
+      <div class="card">
+        <figure>
+          <img src="${item.images[0]}" alt="${item.description}" />
+        </figure>
+        <p class="card-price">$${item.price}</p>
+        <p class="card-name">${item.title}</p>
       </div>
     `);
     const userInfo = `
     <img src="${userList[0].avatar}" />
-    <p><b>User: ${userList[0].name}</b></p>
-    <p>Email: ${userList[0].email}</p>
+    <p class="user-name">${userList[0].name}</p>
+    <p class="user-email">${userList[0].email}</p>
     `;
 
     products.innerHTML = cards.join('');
