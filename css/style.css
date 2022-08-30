@@ -57,7 +57,9 @@ figure {
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 670px;
   height: 50px;
+  margin: 0 auto;
 }
 
 .user {
@@ -72,8 +74,8 @@ figure {
   justify-content: center;
   height: 100vh;
   background-color: white;
-  transform: translateX(-100vw);
-  transition: .5s;
+  transform: translateX(-200vw);
+  transition: .4s ease-in-out;
 }
 
 .user img {
@@ -165,6 +167,8 @@ figure {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .card {

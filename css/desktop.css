@@ -1,0 +1,54 @@
+/*----- Header -----*/
+
+.header-container {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.burger-btn {
+  position: static;
+  cursor: pointer;
+}
+
+.user {
+  left: auto;
+  transform: translateX(0);
+  opacity: 0;
+}
+
+.checkbox:checked ~ .user {
+  opacity: 1;
+}
+
+/*----- Main -----*/
+
+.main {
+  margin-bottom: 40px;
+}
+
+.hero {
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.products {
+  gap: 20px;
+}
+
+.card-price {
+  font-size: 2rem;
+}
+
+.card-name {
+  font-size: 1.4rem;
+}
+
+/*----- Footer -----*/
+
+.footer {
+  padding: 44px 0;
+}
+
+.footer a:hover {
+  opacity: .8;
+}
