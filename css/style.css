@@ -115,6 +115,7 @@ figure {
   width: 19px;
   height: 2px;
   background-color: var(--dark-gray);
+  transition: .6s;
 }
 
 .burger-btn span:nth-child(2) {
@@ -125,6 +126,21 @@ figure {
 .logo img {
   width: 100px;
   height: 32px;
+}
+
+.checkbox:checked ~ 
+.burger-btn span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg) scale(1.3);
+}
+
+.checkbox:checked ~ 
+.burger-btn span:nth-child(2) {
+  transform: scale(0);
+}
+
+.checkbox:checked ~ 
+.burger-btn span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg) scale(1.3);
 }
 
 .checkbox:checked ~ .user {
@@ -168,6 +184,7 @@ figure {
   justify-content: center;
   gap: 12px;
   max-width: 1000px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
