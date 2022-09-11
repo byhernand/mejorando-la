@@ -10,11 +10,10 @@ async function fetchData(urlApi) {
 
 (async () => {
   try {
-    const productList = await fetchData(`${API}/products`);
+    const productList = await fetchData(`${API}/products?offset=20&limit=20`);
     const userList = await fetchData(`${API}/users`);
 
-    const list = productList.slice(5, 25); // Getting 20 products
-    const cards = list.map(item => `
+    const cards = productList.map(item => `
       <div class="card">
         <figure>
           <img src="${item.images[0]}" alt="${item.description}" />
